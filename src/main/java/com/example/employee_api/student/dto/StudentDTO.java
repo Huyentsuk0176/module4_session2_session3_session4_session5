@@ -8,6 +8,7 @@ import lombok.Setter;
 import jakarta.validation.constraints.Min;
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Pattern;
+import jakarta.validation.Valid;
 
 @Getter
 @Setter
@@ -30,5 +31,7 @@ public class StudentDTO {
     @Min(value = 0, message = "GPA must be at least 0")
     @Max(value = 10, message = "GPA must be at most 10")
     private Double gpa;
+    @Valid
+    private ParentDTO parent;
 
 }
